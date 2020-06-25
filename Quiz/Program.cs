@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Quiz
+namespace Quiz.Migrations
 {
     class Program
     {
@@ -23,7 +23,7 @@ namespace Quiz
                 {
                     QuestionId = 1,
                     QuestionForUser = "Michała ukochana to",
-                    Answer = "Basieńka"
+                    AnswerId = 1
                 };
                 db.Questions.Add(question);
                 db.SaveChanges();

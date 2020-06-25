@@ -10,7 +10,7 @@ namespace Quiz
     {
         int AnswerId {get; set;}
         int QuestionId { get; set; }
-        string AnswerFromUser { get; set; }
+        string AnswerTheQuestion { get; set; }
         public virtual Question Question { get; set; }
     }
 }

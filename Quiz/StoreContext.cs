@@ -5,13 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Quiz
+namespace Quiz.Migrations
 {
-    class StoreContext : DbContext
+    public class StoreContext : DbContext
     {
-        public StoreContext() : base("name = StoreContext")
+        public StoreContext() : base("StoreContext")
         {
 
+        }
+        static StoreContext()
+        {
+            Database.SetInitializer<StoreContext>(new StoreInitializer());
         }
         public DbSet<Question> Questions { get; set; }
     }
