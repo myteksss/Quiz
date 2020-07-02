@@ -8,14 +8,15 @@ using System.Data.Entity.Migrations;
 
 namespace Quiz.Migrations
 {
-    public class StoreInitializer : MigrateDatabaseToLatestVersion<StoreContext,Configuration>
+    public class QuizInitializer : MigrateDatabaseToLatestVersion<QuizContext,Configuration>
     {
-        public static void SeedStoreData(StoreContext context)
+        public static void SeedQuizData(QuizContext context)
         {
             var question = new List<Question>
             {
-                new Question() { QuestionId = 1, QuestionForUser = "", AnswerId = 1}
+                new Question() { QuestionId = 1, QuestionForUser = "Question from initializer", AnswerId = 1}
             };
+          
         }
     }
 }

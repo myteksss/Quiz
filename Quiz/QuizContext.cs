@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace Quiz.Migrations
 {
-    public class StoreContext : DbContext
+    public class QuizContext : DbContext
     {
-        public StoreContext() : base("StoreContext")
+        public QuizContext() : base("QuizContext")
         {
 
         }
-        static StoreContext()
+        static QuizContext()
         {
-            Database.SetInitializer<StoreContext>(new StoreInitializer());
+            Database.SetInitializer<QuizContext>(new QuizInitializer());
         }
         public DbSet<Question> Questions { get; set; }
     }

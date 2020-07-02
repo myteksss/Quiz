@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Quiz.Migrations
 {
-    public class Configuration : DbMigrationsConfiguration<StoreContext>
+    public class Configuration : DbMigrationsConfiguration<QuizContext>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
 
