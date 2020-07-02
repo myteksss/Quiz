@@ -16,7 +16,9 @@ namespace Quiz.Migrations
             {
                 new Question() { QuestionId = 1, QuestionForUser = "Question from initializer", AnswerId = 1}
             };
-          
+
+            question.ForEach(q => context.Questions.AddOrUpdate(q));
+            context.SaveChanges();
         }
     }
 }
