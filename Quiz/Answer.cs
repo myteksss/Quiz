@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Quiz
 {
-    class Answer
+    public class Answer
     {
-        int AnswerId {get; set;}
-        int QuestionId { get; set; }
-        string AnswerTheQuestion { get; set; }
-        private bool CorrectAnswer { get; set; }
+        public int AnswerId {get; set;}
+        public int QuestionId { get; set; }
+        public string AnswerTheQuestion { get; set; }
+        public bool CorrectAnswer { get; set; }
         public virtual Question Question { get; set; }
     }
 }

@@ -18,5 +18,8 @@ namespace Quiz.Migrations
             Database.SetInitializer<QuizContext>(new QuizInitializer());
         }
         public DbSet<Question> Questions { get; set; }
+
+        public DbSet<Answer> Answers { get; set; }
+        
     }
 }

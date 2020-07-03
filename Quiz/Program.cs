@@ -8,21 +8,15 @@ using System.Threading.Tasks;
 
 namespace Quiz.Migrations
 {
-    public class Program
+    class Program
     {
         private QuizContext db = new QuizContext();
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+            //var t = db.Questions.Where(a => a.QuestionId == 1).ToString();
+            Console.WriteLine();
 
-           
-            
         }
-        public string TestQuery()
-        {
-            var t = db.Questions.Where(a => a.QuestionId == 1).ToString();
-
-
-            return t;
-        }
+       
     }
 }
