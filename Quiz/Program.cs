@@ -9,12 +9,17 @@ using System.Threading.Tasks;
 namespace Quiz.Migrations
 {
     class Program
-    {
-        private QuizContext db = new QuizContext();
+    {        
         public static void Main(string[] args)
         {
-            //var t = db.Questions.Where(a => a.QuestionId == 1).ToString();
-            Console.WriteLine();
+            using (var context = new QuizContext())
+            {
+                var t = context.Questions.SqlQuery("select QuestionId,QuestionLevel from Questions  ").OrderByDescending<Question>();//context.Questions.Select(a => a.QuestionId == 1);
+                
+                Console.WriteLine(t);
+                Console.ReadLine();
+            }
+            
 
         }
        
