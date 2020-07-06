@@ -9,7 +9,6 @@ namespace Quiz
     public class Question
     {
         public int QuestionId { get; set; }
-
         public int QuestionLevel { get; set; }
         public string QuestionForUser { get; set; }
 
