@@ -12,11 +12,12 @@ namespace Quiz.Migrations
     {        
         public static void Main(string[] args)
         {
-            using (var context = new QuizContext())
+            using (QuizContext context = new QuizContext())
             {
-                var t = context.Questions.SqlQuery("select QuestionId,QuestionLevel from Questions  ").OrderByDescending<Question>();//context.Questions.Select(a => a.QuestionId == 1);
+                //var t = context.Questions.SqlQuery("select QuestionId,QuestionLevel from Questions  ").OrderBy<Question>();
+                var r = context.Questions.Select(a => a.QuestionId == 1);
                 
-                Console.WriteLine(t);
+                Console.WriteLine(r);
                 Console.ReadLine();
             }
             
