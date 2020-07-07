@@ -18,14 +18,21 @@ namespace Quiz.Migrations
             var decide = Console.ReadLine();
             
             QuizContext context = new QuizContext();            
-            var t = context.Questions.Where(a => a.QuestionId == 1);   
+            var firstQuestion = context.Questions.Where(a => a.QuestionId == 1).Where(a => a.QuestionLevel == 1);
+            var firstAnswers = context.Answers.Where(a => a.QuestionId == 1);
             
             if (decide == "y")
             {
-                foreach (var question in t) 
+                foreach (var question in firstQuestion) 
                 { 
                     Console.WriteLine($"QuestionId: {question.QuestionId}, QuestionLevel:  {question.QuestionLevel}");
-                }
+
+
+                }                    
+                foreach (var an in firstAnswers)
+                    {
+                        Console.WriteLine($"A: {an.AnswerTheQuestion}, B: {an.AnswerTheQuestion}, C: {an.AnswerTheQuestion}, D: {an.AnswerTheQuestion}");
+                    }
             }
             else
             {
